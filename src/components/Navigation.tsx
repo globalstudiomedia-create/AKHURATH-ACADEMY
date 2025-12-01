@@ -4,7 +4,17 @@ import { Plane, ChevronDown, Menu, X } from 'lucide-react';
 export default function Navigation() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -41,8 +51,13 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="relative bg-blue-950 shadow-2xl">
-
+    <nav
+      className={`relative z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-blue-950 shadow-2xl'
+          : 'bg-gradient-to-b from-blue-950 to-transparent'
+      }`}
+    >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           <button
