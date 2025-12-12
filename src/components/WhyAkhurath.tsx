@@ -1,7 +1,7 @@
 import { Check } from 'lucide-react';
 
 const benefits = [
-  'Aviation-first institution with disciplined training',
+  'Aviation-focused institution delivering disciplined training.',
   'Eligibility: 12th-pass students',
   'International-standard mentoring',
   'Smart classrooms & practical labs',

@@ -1,4 +1,6 @@
 import { ArrowRight } from 'lucide-react';
+import { Link } from "react-router-dom";
+
 
 export default function CTABanner() {
   return (
@@ -15,10 +17,12 @@ export default function CTABanner() {
             Join Akhurath and prepare for a successful aviation career. Don't miss this opportunity
             to transform your future.
           </p>
-          <button className="bg-blue-950 hover:bg-blue-900 text-white font-bold px-10 py-5 rounded-lg text-xl transition-all duration-300 shadow-2xl hover:shadow-3xl hover:scale-105 inline-flex items-center space-x-3 group">
-            <span>Apply Now</span>
-            <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-          </button>
+          <Link to="/admissions">
+  <button className="bg-blue-950 hover:bg-blue-900 text-white font-bold px-10 py-5 rounded-lg text-xl transition-all duration-300 shadow-2xl hover:shadow-3xl hover:scale-105 inline-flex items-center space-x-3 group">
+    <span>Apply Now</span>
+    <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+  </button>
+</Link>
           <p className="mt-6 text-blue-900 font-semibold">
             Batch starts soon. Secure your seat today!
           </p>

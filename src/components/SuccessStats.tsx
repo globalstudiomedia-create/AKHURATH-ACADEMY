@@ -5,18 +5,18 @@ const stats = [
   {
     icon: Users,
     value: 2500,
-    label: 'Students Placed',
+    label: 'Students Placed Globally',
     suffix: '+',
   },
   {
     icon: Building2,
-    value: 150,
+    value: 50,
     label: 'Aviation Partners',
     suffix: '+',
   },
   {
     icon: Award,
-    value: 15,
+    value: 25,
     label: 'Years of Excellence',
     suffix: '+',
   },
